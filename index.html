@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>D&amp;D Animal Shelter</title>
+	
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/jquery.splitter.min.js"></script>
+	
+	<script type="text/javascript">
+        var featuredImages = new Array(
+            "truman",
+            "atika",
+            "flame",
+            "tammy",
+            "bonnie",
+            "elmer",
+            "azland"
+        );
+        var featuredDescriptions = new Array(
+            "<strong>Truman</strong> praesent risus felis, adipiscing suscipit imperdiet vitae, tempor sit amet eros. Aliquam at lorem leo, at elementum risus. Etiam sed purus tellus. Etiam egestas pulvinar velit, vitae tincidunt ante gravida porttitor.",
+            "<strong>Atika</strong> mauris et nunc non purus semper consequat. Integer enim risus, suscipit eget volutpat non, elementum sed libero. Curabitur varius, lectus vitae pharetra.",
+            "<strong>Flame</strong> vestibulum lectus eget nisi fringilla eu posuere felis rhoncus. Mauris pretium, est vitae rutrum faucibus, felis arcu faucibus tellus, non egestas libero est eget mauris.",
+            "<strong>Tammy</strong> egestas pulvinar velit, vitae tincidunt ante gravida porttitor. Aenean at justo eros. Curabitur vitae lectus nec quam pharetra hendrerit in quis elit. Etiam egestas pulvinar velit. Praesent risus felis, adipiscing suscipit imperdiet vitae, tempor eros.",
+            "<strong>Bonnie</strong> mi consectetur lacinia fermentum, nunc felis bibendum nibh, sit amet iaculis nunc ante sit amet arcu. Ut accumsan porta ligula vitae sagittis.",
+            "<strong>Elmer</strong> accumsan porta ligula vitae sagittis. Fusce facilisis, lectus in molestie faucibus, velit odio pulvinar justo. Curabitur varius, lectus vitae pharetra eu convallis massa sapien eget libero.",
+            "<strong>Azland</strong> fringilla sem purus ut mauris. Nam dapibus placerat arcu, eu rhoncus arcu fringilla non. Ut quis est a sem interdum commodo. Aliquam at lorem leo, at elementum risus. Etiam sed purus tellus."
+        );
+        $().ready(function() {
+            $(".animal_highlight").mouseenter(function() {
+                $(".animal_highlight").removeClass("hover");
+                $(this).addClass("hover");
+                var index = $("#animal_list").children().index($(this).parent());
+                // Change picture
+                //$("#animal_info_picture_fade").attr("src", $("#animal_info_picture").attr("src")).show();
+                $("#animal_info_picture").attr("src", "img/featured/" + featuredImages[index] + ".jpg");
+                //$("#animal_info_picture_fade").stop(true, true).fadeOut("slow");
+                // Update text
+                setFeaturedText(index);
+            });
+            setFeaturedText();
+        });
+        var prevIndex = 0;
+        function setFeaturedText(index) {
+            if (index != prevIndex) {
+                //$("#animal_info_text").stop(true, true).hide("slide", {direction: "down"}, "fast");
+                $("#animal_info_text p").html(featuredDescriptions[index || 0]);
+                $("#animal_info_text").height($("#animal_info_text p").height() + 10)
+                $("#animal_info_text").stop(true, true).show("slide", {direction: "down"}, "fast");
+                prevIndex = index || 0;
+            }
+        }
+    </script>
+    
+    <style type="text/css">
+        @import 'css/style.css';
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <span style="font-size:9px;padding:5px;color:#ccc;">HEADER</span>
+        </div>
+        <div id="toplinks">
+        </div>
+        <div id="intro">
+            <ul id="animal_list">
+                <li><a href="#" class="animal_highlight hover">
+                    <div class="animal_name">Truman</div>
+                    <div class="animal_species">Tiger Cub</div>
+                </a></li>
+                <li><a href="#" class="animal_highlight">
+                    <div class="animal_name">Atika</div>
+                    <div class="animal_species">Cougar</div>
+                </a></li>
+                <li><a href="#" class="animal_highlight">
+                    <div class="animal_name">Flame</div>
+                    <div class="animal_species">Grey Wolf</div>
+                </a></li>
+                <li><a href="#" class="animal_highlight">
+                    <div class="animal_name">Tammy</div>
+                    <div class="animal_species">Mountain Lion</div>
+                </a></li>
+                <li><a href="#" class="animal_highlight">
+                    <div class="animal_name">Bonnie</div>
+                    <div class="animal_species">Mountain Lion</div>
+                </a></li>
+                <li><a href="#" class="animal_highlight">
+                    <div class="animal_name">Elmer</div>
+                    <div class="animal_species">Tortious</div>
+                </a></li>
+                <li><a href="#" class="animal_highlight">
+                    <div class="animal_name">Azland</div>
+                    <div class="animal_species">Lion</div>
+                </a></li>
+            </ul>
+            <div id="animal_info_pane">
+                <div id="animal_info_text_wrapper">
+                <div id="animal_info_text">
+                    <div id="animal_info_text_bg"></div>
+                    <p></p>
+                </div>
+                </div>
+                <img id="animal_info_picture" src="img/featured/truman.jpg" alt="" />
+                <img id="animal_info_picture_fade" src="img/featured/truman.jpg" alt="" style="display: none;" />
+            </div>
+        </div>
+        <div id="content">
+            <div style="float: right; margin: 15px 5px 5px 5px; width: 200px; height: 300px; border: 1px solid #eb6; background: #ed8;"><h3 style="color:#950;font-weight:normal;font-size:16px;margin: 5px 10px;border-bottom: 1px solid #eb6;">Contact Info</h3></div>
+            <h2>Level 2 Heading</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent interdum nulla eu lectus consequat feugiat. Mauris et nunc non purus semper consequat. Integer enim risus, suscipit eget volutpat non, elementum sed libero. Praesent accumsan risus tristique sem semper id placerat arcu egestas. Nam vestibulum lectus eget nisi fringilla eu posuere felis rhoncus. Mauris pretium, est vitae rutrum faucibus, felis arcu faucibus tellus, non egestas libero est eget mauris. Sed elit tortor, posuere quis consectetur non, dignissim vitae sapien. Etiam egestas pulvinar velit, vitae tincidunt ante gravida porttitor. Aenean at justo eros. Curabitur vitae lectus nec quam pharetra hendrerit in quis elit. Curabitur sollicitudin, mi consectetur lacinia fermentum, nunc felis bibendum nibh, sit amet iaculis nunc ante sit amet arcu. Ut accumsan porta ligula vitae sagittis. Fusce facilisis, lectus in molestie faucibus, velit odio pulvinar justo, eu convallis massa sapien eget libero. Curabitur varius, lectus vitae pharetra condimentum, risus tellus facilisis risus, nec fringilla sem purus ut mauris. Nam dapibus placerat arcu, eu rhoncus arcu fringilla non. Ut quis est a sem interdum commodo. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div id="footer" style="position: relative;">
+            <span style="font-size:9px;padding:5px;color:#ccc;position:absolute;bottom:0;right:0;">FOOTER</span>
+        </div>
+    </div>
+</body>
+</html>
