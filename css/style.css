@@ -126,3 +126,15 @@ ul#animal_list li a.hover {
     height: 40px;
     background: #000;
 }
+
+/*This is where I'm going to start sjrzrc CSS additions!*/
+.aboutus {
+	position: relative;
+}
+#menu a {
+	font: 15px;
+	text-decoration: none;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-right: 1px dotted black;
+}
