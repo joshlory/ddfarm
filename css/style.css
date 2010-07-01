@@ -163,7 +163,7 @@ ul#animal_list li a.hover {
 	left: 10px;
 }
 a.cfac-link {
-	color: inherit;
+	color: #ccc;
 	text-decoration: none;
 	position: absolute;
 	bottom: 10px;
