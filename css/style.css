@@ -122,6 +122,29 @@ ul#animal_list li a.hover {
 #content p {
     line-height: 1.8em;
 }
+.sidebox {
+	margin: 15px 5px 5px 5px;
+	color:#950;
+	border: 1px solid #eb6;
+	background: #ed8 url('../img/pawprint.png') bottom right no-repeat;
+}
+.sidebox-header {
+	margin: 5px 10px;
+	font-size:16px;
+	font-weight:normal;
+	border-bottom: 3px double #eb6;
+}
+.sidebox-content {
+	margin: 5px 10px;
+	font-size: 1.1em;
+	line-height: 1.4em;
+}
+.right {
+	float: right;
+}
+.left {
+	float: left;
+}
 #footer {
     widht: 100%;
     height: 40px;
