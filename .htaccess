@@ -1,7 +1,7 @@
 ### activate mod_expires
 ExpiresActive On
 ### Expire images 1 hour from when they're accessed
-ExpiresByType image/* access plus 1 hour
+ExpiresByType image/* A3600
 ### Expire everything else immediately on access
 ExpiresDefault access
 ### Apply a Cache-Control header to index.html
