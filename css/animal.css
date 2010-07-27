@@ -1,104 +1,104 @@
 * {
-            padding: 0;
-            margin: 0;
-        }
-        body {
-            background: #333;
-            font: 11.5px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-        }
-        a, a:active {
-            outline: none;
-        }
-        #wrapper {
-            width: 760px;
-            background: #eed;
-            margin: 20px auto;
-        }
-        #header {
-            width: 100%;
-            height: 85px;
-            background: #000;
-        }
-        #toplinks {
-            width: 100%;
-            height: 30px;
-            background: #eb6;
-        }
-        #intro {
-            border-top: 7px solid #eb6;
-            border-bottom: 7px solid #eb6;
-        }
-        #animal_info_pane {
-            width: 100%;
-            height: 500px;
-            position: relative;
-            z-index: 10;
-            background: #eed;
-        }
-        #animal_info_text {
-            width: 280px;
-            height: 480px;
-            position: absolute;
-            margin: 10px;
-            background: #ed8;
-        	border: 1px solid #eb6;
-        }
-        #animal_info_text h1 {
-        	color:#950;
-        	font-weight:normal;
-        	font-size:36px;
-        	margin: 0px 10px;
-        }
-        #animal_info_text h2 {
-        	color:#d80;
-        	font-weight:normal;
-        	font-size:20px;
-        	margin: 0px 10px;
-        	border-bottom: 1px solid #eb6;
-        }
-        #animal_info_text p {
-        	margin: 5px 25px;
-        }
-        #animal_info_text p.facts {
-        	margin-left: 20px;
-        	line-height: 30px;
-        	font-weight: bold;
-        }
-        #animal_info_pic_big {
-            width: 450px;
-            height: 370px;
-            position: absolute;
-            margin-top: 10px;
-            margin-left: 300px;
-            background: #000;
-        }
-        #animal_info_pic_bottom {
-            position: absolute;
-            margin-top: 390px;
-            margin-left: 300px;
-        }
-        #animal_info_pic_small {
-			width: 105px;
-			height: 100px;
-			margin-right: 10px;
-			float: left;
-			display: block;
-            background: #000;
-        }
-        #content {
-            padding: 0 10px 10px 10px;
-            background: #fff;
-            border-top: 1px solid #000;
-            min-height: 320px;
-        }
-        #content h2 {
-            padding-top: 0.5em;
-        }
-        #content p {
-            line-height: 1.8em;
-        }
-        #footer {
-            width: 100%;
-            height: 40px;
-            background: #000;
-        }
+    padding: 0;
+    margin: 0;
+}
+body {
+    background: #333;
+    font: 11.5px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+a, a:active {
+    outline: none;
+}
+#wrapper {
+    width: 760px;
+    background: #eed;
+    margin: 20px auto;
+}
+#header {
+    width: 100%;
+    height: 85px;
+    background: #000;
+}
+#toplinks {
+    width: 100%;
+    height: 30px;
+    background: #eb6;
+}
+#intro {
+    border-top: 7px solid #eb6;
+    border-bottom: 7px solid #eb6;
+}
+#animal_info_pane {
+    width: 100%;
+    height: 500px;
+    position: relative;
+    z-index: 10;
+    background: #eed;
+}
+#animal_info_text {
+    width: 280px;
+    height: 480px;
+    position: absolute;
+    margin: 10px;
+    background: #ed8;
+	border: 1px solid #eb6;
+}
+#animal_info_text h1 {
+	color:#950;
+	font-weight:normal;
+	font-size:36px;
+	margin: 0px 10px;
+}
+#animal_info_text h2 {
+	color:#d80;
+	font-weight:normal;
+	font-size:20px;
+	margin: 0px 10px;
+	border-bottom: 1px solid #eb6;
+}
+#animal_info_text p {
+	margin: 5px 25px;
+}
+#animal_info_text p.facts {
+	margin-left: 20px;
+	line-height: 30px;
+	font-weight: bold;
+}
+#animal_info_pic_big {
+    width: 450px;
+    height: 370px;
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 300px;
+    background: #000;
+}
+#animal_info_pic_bottom {
+    position: absolute;
+    margin-top: 390px;
+    margin-left: 300px;
+}
+#animal_info_pic_small {
+    width: 105px;
+    height: 100px;
+    margin-right: 10px;
+    float: left;
+    display: block;
+    background: #000;
+}
+#content {
+    padding: 0 10px 10px 10px;
+    background: #fff;
+    border-top: 1px solid #000;
+    min-height: 320px;
+}
+#content h2 {
+    padding-top: 0.5em;
+}
+#content p {
+    line-height: 1.8em;
+}
+#footer {
+    width: 100%;
+    height: 40px;
+    background: #000;
+}

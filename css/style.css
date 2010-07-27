@@ -144,6 +144,24 @@ ul#animal_list li a.hover {
 	margin: 5px 10px;
 	font-size: 1.1em;
 }
+.animal-card {
+	width: 400px;
+	height: 100px;
+}
+.animal-card .sidebox-header {
+	width: 280px;
+	color: #000;
+}
+.animal-card img.profile {
+	width: 84px;
+	height: 84px;
+	margin: 6px;
+	border: 2px solid #eb6;
+}
+img.iucn_status {
+	width: 24px;
+	height: 24px;
+}
 .right {
 	float: right;
 }
@@ -178,10 +196,22 @@ a.cfac-link img {
 .aboutus {
 	position: relative;
 }
+#menu {
+	height: 31px;
+	background: #222;
+}
 #menu a {
-	font-size: 15px;
+	color: #fff;
+	background: #333;
+	font-size: 14px;
 	text-decoration: none;
-	padding-left: 10px;
-	padding-right: 10px;
-	border-right: 1px dotted black;
+	padding: 4px 12px;
+	float: left;
+	border-left: 1px solid #666;
+	border-right: 1px solid #000;
+}
+#menu a:hover {
+	background: #666;
+	border-left-color: #666;
+	border-right-color: #666;
 }
