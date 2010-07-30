@@ -158,6 +158,10 @@ ul#animal_list li a.hover {
 	margin: 6px;
 	border: 2px solid #eb6;
 }
+.animal-card-description {
+	width: 320px;
+	border-top: 5px solid #eed;
+}
 img.iucn_status {
 	width: 24px;
 	height: 24px;
