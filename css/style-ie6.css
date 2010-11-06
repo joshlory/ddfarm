@@ -1,0 +1,5 @@
+/* this css file is intended to address a but in the internet explorer 6 broser. */
+
+ul#animal_list li a.hover {
+    background: transparent url('../tab.gif') center right no-repeat;
+}
