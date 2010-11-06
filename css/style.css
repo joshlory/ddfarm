@@ -106,9 +106,6 @@ ul#animal_list li a.hover {
     padding-right: 9px;
     color: #fff;
 }
-* html ul#animal_list li a.hover {
-    background: transparent url('../tab.gif') center right no-repeat;
-}
 .animal_name {
 	display: block;
     padding: 5px 10px 0 10px;
