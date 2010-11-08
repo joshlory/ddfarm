@@ -31,27 +31,28 @@
             "<strong>Azland</strong> is a Barbery Lion, which are extinct in the wild. He was a gift to Dale from GW exotic animal park in Oklahoma. His parents are being checked for the Barbery Lion Project, and if they turn out positive he will become part of the program as well."
         );
         $().ready(function() {
+            var currentIndex = 0;
             $(".animal_highlight").mouseenter(function() {
                 $(".animal_highlight").removeClass("hover");
                 $(this).addClass("hover");
-                var index = $("#animal_list").children().index($(this).parent());
+                var index = currentIndex = $("#animal_list").children().index($(this).parent());
                 // Change picture
                 var temp = new Image();
                 var src = "img/featured/" + featuredImages[index] + ".jpg";
                 var loaded = false;
                 $(temp).load(function() {
-                    loaded = true;
-                	$("#animal_info_picture").attr("src", src);
-                	$("#animal_info_picture").show();
-                	//$("#animal_info_picture_fade").stop(true, true).fadeOut("slow");
+                    if (index == currentIndex) {
+                        loaded = true;
+                	    $("#animal_info_picture").attr("src", src);
+                	    $("#animal_info_picture").show();
+                    }
                 }).attr("src", src);
                 function checkIfLoaded() {
                     if (!loaded) {
-                    	$("#animal_info_picture").hide();
-                        //$("#animal_info_picture_fade").show();
+                        $("#animal_info_picture").hide();
                     }
                 }
-                setTimeout(checkIfLoaded, 50);
+                setTimeout(checkIfLoaded, 100);
                 // Update text
                 setFeaturedText(index);
             });
@@ -60,9 +61,8 @@
         var prevIndex = 0;
         function setFeaturedText(index) {
             if (index != prevIndex) {
-                //$("#animal_info_text").stop(true, true).hide("slide", {direction: "down"}, "fast");
                 $("#animal_info_text p").html(featuredDescriptions[index || 0]);
-                $("#animal_info_text").height($("#animal_info_text p").height() + 10)
+                $("#animal_info_text").height($("#animal_info_text p").height() + 10);
                 $("#animal_info_text").stop(true, true).show("slide", {direction: "down"}, "fast");
                 prevIndex = index || 0;
             }
