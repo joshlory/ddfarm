@@ -6,7 +6,8 @@ body {
     background: #333;
     font: 11.5px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
-a, a:active {
+a, a:link, a:active, a:hover, a:visited {
+	color: #00f;
     outline: none;
 }
 #wrapper {
